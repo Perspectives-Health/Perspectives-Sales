@@ -40,6 +40,10 @@
 | 8 | Nitya Sivakumar | HEAL Behavioral Health | Co-Owner | Email | Sent Apr 7 | nitya@healbh.com — hook: Indian-American, SHE RECOVERS |
 | 9 | John Charos | JC's Recovery Center | CFO | Email | Sent Apr 7 | — pilot cohort angle, call to follow up |
 | 3 | Jason Chain | Augustine Recovery | CEO/Owner | — | Sent Apr 6 | Already messaged previously |
+| 10 | Alex Alonso | Bright Futures Treatment Center | VP & Co-Founder | Email | Sent Apr 8 | aalonso@brightfuturestreatment.com — hook: Bright View Media |
+| 11 | Joseph Donovan | Ebb Tide Treatment Centers | Founder & CEO | Email | Sent Apr 8 | jdonovan@ebbtidetc.com |
+| 12 | Ryan Donovan | Ebb Tide Treatment Centers | CFO & Co-Founder | Email | Sent Apr 8 | rdonovan@ebbtidetc.com |
+| 13 | George Mavrookas | Agape Detox Center | Founder & CEO | Email | Sent Apr 8 | gmavrookas@agapetc.com — hook: Swagger feature |
 
 ---
 
@@ -145,3 +149,6 @@
 - Christopher Ferry added (Boca Raton, South FL) — driving down Wed-Fri.
 - James Marshall (Serenity Springs) — no response to call/text, try again.
 - John Charos (JC's Recovery Center, CFO) — call after email. (jcrecoverycenter.com, Hollywood FL)
+
+## Resources
+- YC LinkedIn post on behavioral health denials (use in emails): https://www.linkedin.com/posts/y-combinator_behavioral-health-providers-lose-up-to-20-activity-7419483900399235072-hdf4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD3Z0dgBBLG0Ik5vEOnypl74Fy7wKGc8Mr0
