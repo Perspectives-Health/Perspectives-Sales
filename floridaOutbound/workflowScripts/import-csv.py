@@ -28,7 +28,7 @@ Expected CSV columns (flexible — script tries common variants):
 import csv, json, re, sys
 from pathlib import Path
 
-HERE = Path(__file__).parent
+HERE = Path(__file__).parent.parent
 JSON = HERE / "companies.json"
 
 # ── Column name aliases ──
@@ -219,7 +219,7 @@ def main():
         json.dump(companies, f, indent=2)
 
     print(f"\n✓ Done: {added} added, {skipped} already existed ({merged} people merged), {len(companies)} total companies")
-    print("Next: fill in lat/lng, ICP tier, PE research, then run: python3 inject.py")
+    print("Next: fill in lat/lng, ICP tier, PE research, then run: python3 workflowScripts/inject.py")
 
 if __name__ == "__main__":
     main()

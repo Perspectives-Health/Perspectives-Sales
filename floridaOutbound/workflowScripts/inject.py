@@ -3,7 +3,7 @@
 import json, re, sys
 from pathlib import Path
 
-HERE = Path(__file__).parent
+HERE = Path(__file__).parent.parent
 JSON = HERE / "companies.json"
 HTML = HERE / "florida-map.html"
 

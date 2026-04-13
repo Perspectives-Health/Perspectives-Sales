@@ -14,10 +14,10 @@ Full pipeline for a new batch of leads:
 # 1. Export CSV from Origami AI, save to this folder
 
 # For Origami AI exports (recommended — auto-extracts lat/lng, emails, ICP tier):
-python3 import-origami.py export-YYYY-MM-DD.csv
+python3 workflowScripts/import-origami.py export-YYYY-MM-DD.csv
 
 # For generic/other CSVs (flexible column matching, needs manual enrichment after):
-python3 import-csv.py leads.csv
+python3 workflowScripts/import-csv.py leads.csv
 
 # 2. For generic CSV: hand off to a Claude instance with this prompt:
 #    "New companies were appended to companies.json with icp.tier=null and lat/lng=null.
@@ -25,13 +25,13 @@ python3 import-csv.py leads.csv
 #     research PE ownership. Update companies.json. README has schema and enum values."
 
 # 3. Once enriched:
-python3 inject.py                       # bake data into the map
+python3 workflowScripts/inject.py       # bake data into the map
 # Refresh browser
 ```
 
-**import-origami.py** handles Origami AI's specific format: extracts lat/lng from the Raw Data JSON blob, uses confirmed emails, auto-assigns ICP tier from commercial insurance + levels of care signals, and merges people into existing companies without duplication.
+**workflowScripts/import-origami.py** handles Origami AI's specific format: extracts lat/lng from the Raw Data JSON blob, uses confirmed emails, auto-assigns ICP tier from commercial insurance + levels of care signals, and merges people into existing companies without duplication.
 
-**import-csv.py** handles flexible generic CSVs (Company, Contact, Title, Email, Phone, LinkedIn, Website, City, State). New companies get flagged with `⚠ Not yet evaluated` so they're easy to find.
+**workflowScripts/import-csv.py** handles flexible generic CSVs (Company, Contact, Title, Email, Phone, LinkedIn, Website, City, State). New companies get flagged with `⚠ Not yet evaluated` so they're easy to find.
 
 ---
 
@@ -41,7 +41,7 @@ Open `florida-map.html` directly in any browser. No server needed.
 
 After editing `companies.json`, run:
 ```bash
-python3 inject.py
+python3 workflowScripts/inject.py
 ```
 Then refresh the browser tab.
 
@@ -53,7 +53,9 @@ Then refresh the browser tab.
 |------|---------|
 | `florida-map.html` | The map — open directly in browser |
 | `companies.json` | **Source of truth** — edit this, then run inject.py |
-| `inject.py` | Syncs companies.json → florida-map.html |
+| `workflowScripts/inject.py` | Syncs companies.json → florida-map.html |
+| `workflowScripts/import-origami.py` | Import Origami AI CSV exports |
+| `workflowScripts/import-csv.py` | Import generic CSV leads |
 | `outreach-tracker.md` | Original outreach log with sent messages |
 | `enriched-contacts.md` | Full contact/exec sheet with route suggestions |
 | `pe-research.md` | PE ownership deep-dive (in progress, another instance) |

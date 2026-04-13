@@ -20,7 +20,7 @@ Auto-assigns ICP tier from available signals.
 import csv, json, re, sys
 from pathlib import Path
 
-HERE = Path(__file__).parent
+HERE = Path(__file__).parent.parent
 JSON = HERE / "companies.json"
 
 CENTRAL_CITIES = {
@@ -261,7 +261,7 @@ def main():
 
     print(f"\n✓ Done: {added} new companies added, {merged_people} people merged into existing, {updated_fields} fields updated")
     print(f"Total companies: {len(companies)}")
-    print("Next: run python3 inject.py")
+    print("Next: run python3 workflowScripts/inject.py")
 
 
 if __name__ == "__main__":
